@@ -1,0 +1,213 @@
+/* Код для подключения шрифта в /css/stylename.css */
+@font-face {
+    font-family: "TimesNewRomanRegular";
+    src: url("../fonts/TimesNewRomanRegular/TimesNewRomanRegular.eot");
+    src: url("../fonts/TimesNewRomanRegular/TimesNewRomanRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/TimesNewRomanRegular/TimesNewRomanRegular.woff") format("woff"),
+    url("../fonts/TimesNewRomanRegular/TimesNewRomanRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "TimesNewRomanItalic";
+    src: url("../fonts/TimesNewRomanItalic/TimesNewRomanItalic.eot");
+    src: url("../fonts/TimesNewRomanItalic/TimesNewRomanItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/TimesNewRomanItalic/TimesNewRomanItalic.woff") format("woff"),
+    url("../fonts/TimesNewRomanItalic/TimesNewRomanItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+img {
+    max-width: 100%;
+}
+body {
+    margin: 0;
+}
+menu {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #ffffff;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.button {
+    padding: 15px 42px;
+    background: transparent;
+    border: 2px solid;
+    text-transform: uppercase;
+}
+.button-transparent {
+    color: #fff;
+    border-color: #fff;
+}
+.header {
+    background: url("../img/bg.jpg");
+    padding: 0 75px;
+    height: 100vh;
+}
+.header-menu::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.logo {
+    float: left;
+}
+.menu-wrap {
+    float: right;
+    padding-top: 15px;
+}
+.menu-items li {
+    float: left;
+    list-style: none;
+    padding: 20px 10px;
+}
+.menu-items li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.burger-icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 15px;
+}
+.burger-line {
+    border-top: 2px solid #fff;
+    padding: 3px 0;
+}
+.close {
+    padding: 15px;
+    text-align: right;
+}
+.close:hover {
+    cursor: pointer;
+}
+.close img {
+    width: 25px;
+    height: 25px;
+}
+.header-text {
+    text-align: center;
+    padding: 90px 0;
+    color: #fff;
+}
+.header-text p {
+    text-transform: uppercase;
+}
+.header-button {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.header-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 100px;
+}
+.header-cursive {
+    font-family: "TimesNewRomanItalic";
+    margin-bottom: 6px;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.content-box {
+    padding: 70px 75px;
+}
+.section-first {
+    background-color: #fff;
+}
+.section-first::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.img-border {
+    border: 2px solid #000;
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.md-title {
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+}
+.title-line {
+    width: 100px;
+    border-top: 1px solid #f57365;
+    margin: 0 auto;
+}
+.column-text {
+    margin: 14px 0;
+}
+
+.section-second {
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-around;
+}
+.img-wrap {
+    width: 50%;
+    max-width: 395px;
+}
+.text-wrap {
+    width: 50%;
+}
+
+/*до 773px*/
+@media all and (max-width: 773px) {
+    .header {
+        padding: 0;
+    }
+    menu {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #222;
+        width: 0;
+        height: 100vh;
+        transition: width 2s;
+    }
+    .menu-items.open {
+        width: 300px;
+    }
+    .menu-items li {
+        float: none;
+        display: block;
+        width: 300px;
+    }
+}
+/*от 773px*/
+@media all and (min-width: 773px) {
+    .burger-icon,
+    .close {
+        display: none;
+    }
+}
